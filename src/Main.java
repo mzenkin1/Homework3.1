@@ -4,12 +4,11 @@ public class Main {
 
         System.out.println("Задача 1");
 
-        int age = 17;
+        int age = 19;
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age + " , то он совершеннолетний. ");
-        }
 
-        if (age < 18) {
+        } else {
             System.out.println("Если возраст человека равен " + age + " он не достиг совершеннолетия, нужно немного подождать.");
         }
 
@@ -70,11 +69,18 @@ public class Main {
 
         System.out.println("Задача 6");
 
-        int humanWagon = 103;
+        int humanWagon = 60;
+        int placesWagon = 102;
+        int sitPlaceWagon = 60;
 
-        if (humanWagon <= 60 || humanWagon <= 102) {
-            System.out.println("В вагоне есть место сидячее или стоячее");
-        } else {
+
+        if (humanWagon < sitPlaceWagon) {
+            System.out.println("В вагоне есть места для сидения");
+        }
+        if (humanWagon < placesWagon && humanWagon >= sitPlaceWagon) {
+            System.out.println("В вагоне есть места для стояния");
+        }
+        if (humanWagon >= placesWagon) {
             System.out.println("В вагоне нет мест");
         }
 
